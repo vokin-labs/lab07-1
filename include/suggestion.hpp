@@ -2,8 +2,8 @@
 // Created by alesandr on 04.04.2021.
 //
 
-#ifndef TEMPLATE_SUGGESTION_H
-#define TEMPLATE_SUGGESTION_H
+#ifndef INCLUDE_SUGGESTION_HPP_
+#define INCLUDE_SUGGESTION_HPP_
 #include <shared_mutex>
 #include <string>
 #include <vector>
@@ -11,7 +11,6 @@
 #include <iostream>
 #include <algorithm>
 #include <fstream>
-#include <iostream>
 #include <unistd.h>
 
 using json = nlohmann::json;
@@ -45,4 +44,4 @@ class suggestion {
 
   string file_name_;
 };
-#endif  // TEMPLATE_SUGGESTION_H
+#endif  // INCLUDE_SUGGESTION_HPP_

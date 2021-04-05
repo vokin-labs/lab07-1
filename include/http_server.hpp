@@ -1,7 +1,7 @@
-// Copyright 2020 Your Name <your_email>
+// Copyright 2021 MIX-1 <danilonil1@yandex.ru>
 
-#ifndef INCLUDE_HEADER_HPP_
-#define INCLUDE_HEADER_HPP_
+#ifndef INCLUDE_HTTP_SERVER_HPP_
+#define INCLUDE_HTTP_SERVER_HPP_
 #include <boost/beast/core.hpp>
 #include <boost/beast/http.hpp>
 #include <boost/beast/version.hpp>
@@ -64,4 +64,4 @@ class http_connection : public std::enable_shared_from_this<http_connection> {
 };
 
 void http_server(tcp::acceptor& acceptor, tcp::socket& socket, suggestion& sug);
-#endif // INCLUDE_HEADER_HPP_
+#endif // INCLUDE_HTTP_SERVER_HPP_

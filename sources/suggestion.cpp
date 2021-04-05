@@ -1,6 +1,4 @@
-//
-// Created by alesandr on 04.04.2021.
-//
+// Copyright 2021 MIX-1 <danilonil1@yandex.ru>
 
 #include <suggestion.hpp>
 
@@ -14,8 +12,8 @@ json suggestion::get_json_suggestion(string input) {
   int count = 0;
   mutex.lock();
   std::sort(suggestions.begin(), suggestions.end(), comp);
-  for(auto& sug : suggestions){
-    if(sug.id == j["input"].get<string>()) {
+  for (auto& sug : suggestions){
+    if (sug.id == j["input"].get<string>()) {
       sug_answer answer = sug_answer{sug.name, ++count};
       out_suggestions.push_back(json{{"text", answer.text},
                                     {"position", answer.position}
@@ -29,7 +27,7 @@ json suggestion::get_json_suggestion(string input) {
 }
 
 void suggestion::update_suggestion() {
-  for(;;){
+  for (;;){
     mutex.lock();
     std::ifstream file(file_name_);
     suggestions.clear();
@@ -37,12 +35,12 @@ void suggestion::update_suggestion() {
     if (file_name_.empty()){
       throw std::invalid_argument("empty file\n");
     }
-    if(!file) {
+    if (!file) {
       throw std::runtime_error("bad open json_file: " + file_name_);
     }
     file >> data;
     file.close();
-    for(auto const& sug : data.at("suggestions")){
+    for (auto const& sug : data.at("suggestions")){
       suggestions.push_back({
           sug["id"].get<string>(),
               sug["name"].get<string>(),
