@@ -1,4 +1,5 @@
-//Copyright 2021 MIX-1
+// Copyright 2021 MIX-1 <danilonil1@yandex.ru>
+
 
 #ifndef INCLUDE_HTTP_SERVER_HPP_
 #define INCLUDE_HTTP_SERVER_HPP_

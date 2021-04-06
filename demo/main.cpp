@@ -1,4 +1,5 @@
-// Copyright [year] <Copyright Owner>
+// Copyright 2021 MIX-1 <danilonil1@yandex.ru>
+
 
 #include <http_server.hpp>
 #include "suggestion.hpp"
