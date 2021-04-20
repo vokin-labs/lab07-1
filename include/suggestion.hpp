@@ -1,5 +1,5 @@
-// Created by alesandr on 04.04.2021.
-//
+// Copyright 2021 vokin-labs <vokinsilok2305@mail.ru>
+
 
 #ifndef INCLUDE_SUGGESTION_HPP_
 #define INCLUDE_SUGGESTION_HPP_
